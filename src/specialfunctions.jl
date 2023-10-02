@@ -46,7 +46,7 @@ function pochhammer(x::Number, n::UnitRange{T}) where T <: Real
     ret
 end
 
-ogamma(x::Number) = (isinteger(x) && x<0) ? zero(float(x)) : inv(gamma(x))
+ogamma(x::Number) = (isinteger(x) && x<0) ? zero(real(x)) : inv(gamma(x))
 
 """
     @clenshaw(x, c...)
@@ -327,7 +327,7 @@ function _reconeβ₀(a::T, b::T, c::T, w::Number, m::Int, ϵ::T) where {T}
     if abs(ϵ) > 0.1
         return ( pochhammer(a, m)*pochhammer(b, m)/(gamma(1-ϵ)*gamma(a+m+ϵ)*gamma(b+m+ϵ)*gamma(real(T)(m)+1)) - w^ϵ/(gamma(a)*gamma(b)*gamma(m+1+ϵ)) )*gamma(c)*w^m/ϵ
     else
-        return ( (G(1, -ϵ)/gamma(real(T)(m)+1)+G(m+1, ϵ))/(gamma(a+m+ϵ)*gamma(b+m+ϵ)) - (G(a+m, ϵ)/gamma(b+m+ϵ)+G(float(b)+m, ϵ)/gamma(a+m))/gamma(m+1+ϵ) - E(log(w), ϵ)/(gamma(a+m)*gamma(b+m)*gamma(m+1+ϵ)) )*gamma(c)*pochhammer(a, m)*pochhammer(b, m)*w^m
+        return ( (G(1, -ϵ)/gamma(real(T)(m)+1)+G(m+1, ϵ))/(gamma(a+m+ϵ)*gamma(b+m+ϵ)) - (G(a+m, ϵ)/gamma(b+m+ϵ)+G(real(b)+m, ϵ)/gamma(a+m))/gamma(m+1+ϵ) - E(log(w), ϵ)/(gamma(a+m)*gamma(b+m)*gamma(m+1+ϵ)) )*gamma(c)*pochhammer(a, m)*pochhammer(b, m)*w^m
     end
 end
 function reconeγ₀(a, b, c, w, m::Int, ϵ)

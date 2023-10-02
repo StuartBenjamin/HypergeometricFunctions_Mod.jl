@@ -4,7 +4,7 @@
 Compute the Gauss hypergeometric function `₂F₁(a, b, c, z)`.
 """
 function _₂F₁(a, b, c, z; method::Symbol = :general, kwds...)
-    z = float(z)
+    z = real(z)
     if real(b) < real(a)
         return _₂F₁(b, a, c, z; method = method, kwds...) # ensure a ≤ b
     elseif isequal(a, c) # 1. 15.4.6

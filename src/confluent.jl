@@ -4,7 +4,7 @@
 Compute Kummer's confluent hypergeometric function `₁F₁(a, b, z)`.
 """
 function _₁F₁(a, b, z; kwds...)
-    z = float(z)
+    z = real(z)
     if isequal(a, b) # 13.6.1
         return exp(z)
     elseif -b ∈ ℕ

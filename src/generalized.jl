@@ -58,7 +58,7 @@ pFq(α::NTuple{1}, β::NTuple{1}, z; kwds...) = _₁F₁(α[1], β[1], z; kwds..
 pFq(α::NTuple{2, Any}, β::NTuple{1}, z; kwds...) = _₂F₁(α[1], α[2], β[1], z; kwds...)
 
 function pFq(α::NTuple{p, Any}, β::NTuple{q, Any}, z; kwds...) where {p, q}
-    z = float(z)
+    z = real(z)
     if p ≤ q
         if real(z) > 0
             return pFqmaclaurin(α, β, z; kwds...)
