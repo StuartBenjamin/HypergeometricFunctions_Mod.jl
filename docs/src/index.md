@@ -1,8 +1,8 @@
-# HypergeometricFunctions.jl Documentation
+# HypergeometricFunctions_Mod.jl Documentation
 
 ## Introduction
 
-[`HypergeometricFunctions.jl`](https://github.com/JuliaMath/HypergeometricFunctions.jl) provides a numerical computation of generalized hypergeometric functions. The main exported function and recommended interface is [`pFq`](@ref), but there are a few others for specialists' convenience.
+[`HypergeometricFunctions_Mod.jl`](https://github.com/JuliaMath/HypergeometricFunctions_Mod.jl) provides a numerical computation of generalized hypergeometric functions. The main exported function and recommended interface is [`pFq`](@ref), but there are a few others for specialists' convenience.
 
 ```@docs
 pFq
@@ -15,7 +15,7 @@ Broadly speaking, there are three classes of generalized hypergeometric function
 Examples of each of these classes are illustrated over $\left\{z\in\mathbb{C} : -10<\Re z<10, -10<\Im z<10\right\}$ with [complex phase portraits](https://en.wikipedia.org/wiki/Domain_coloring), a beautiful tool in computational complex analysis.
 
 ```@example
-using ComplexPhasePortrait, HypergeometricFunctions, Images
+using ComplexPhasePortrait, HypergeometricFunctions_Mod, Images
 x = range(-10, stop=10, length=300)
 y = range(-10, stop=10, length=300)
 z = x' .+ im*y
@@ -55,17 +55,17 @@ _₃F₂
 ## Internals
 
 ```@docs
-HypergeometricFunctions.M
-HypergeometricFunctions.U
-HypergeometricFunctions._₂F₁positive
-HypergeometricFunctions._₂F₁general
-HypergeometricFunctions._₂F₁general2
-HypergeometricFunctions.pFqdrummond
-HypergeometricFunctions.pFqweniger
-HypergeometricFunctions.pFqcontinuedfraction
-HypergeometricFunctions.pochhammer
-HypergeometricFunctions.@clenshaw
-HypergeometricFunctions.@lanczosratio
-HypergeometricFunctions.G
-HypergeometricFunctions.P
+HypergeometricFunctions_Mod.M
+HypergeometricFunctions_Mod.U
+HypergeometricFunctions_Mod._₂F₁positive
+HypergeometricFunctions_Mod._₂F₁general
+HypergeometricFunctions_Mod._₂F₁general2
+HypergeometricFunctions_Mod.pFqdrummond
+HypergeometricFunctions_Mod.pFqweniger
+HypergeometricFunctions_Mod.pFqcontinuedfraction
+HypergeometricFunctions_Mod.pochhammer
+HypergeometricFunctions_Mod.@clenshaw
+HypergeometricFunctions_Mod.@lanczosratio
+HypergeometricFunctions_Mod.G
+HypergeometricFunctions_Mod.P
 ```

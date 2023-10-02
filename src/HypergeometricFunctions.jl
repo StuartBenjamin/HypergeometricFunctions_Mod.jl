@@ -1,4 +1,4 @@
-module HypergeometricFunctions
+module HypergeometricFunctions_Mod
 
 using DualNumbers, LinearAlgebra, SpecialFunctions
 

@@ -57,10 +57,10 @@ External links: [DLMF](https://dlmf.nist.gov/3.11#ii), [Wikipedia](https://en.wi
 
 # Examples
 ```jldoctest
-julia> HypergeometricFunctions.@clenshaw(1, 1, 2, 3)
+julia> HypergeometricFunctions_Mod.@clenshaw(1, 1, 2, 3)
 6
 
-julia> HypergeometricFunctions.@clenshaw(0.5, 1, 2, 3)
+julia> HypergeometricFunctions_Mod.@clenshaw(0.5, 1, 2, 3)
 0.5
 ```
 """

@@ -1,11 +1,11 @@
-# HypergeometricFunctions.jl
+# HypergeometricFunctions_Mod.jl
 
-[![Build Status](https://github.com/JuliaMath/HypergeometricFunctions.jl/workflows/CI/badge.svg)](https://github.com/JuliaMath/HypergeometricFunctions.jl/actions?query=workflow%3ACI) [![codecov](https://codecov.io/gh/JuliaMath/HypergeometricFunctions.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/JuliaMath/HypergeometricFunctions.jl) [![](https://img.shields.io/badge/docs-stable-blue.svg)](https://JuliaMath.github.io/HypergeometricFunctions.jl/stable) [![](https://img.shields.io/badge/docs-dev-blue.svg)](https://JuliaMath.github.io/HypergeometricFunctions.jl/dev)
+[![Build Status](https://github.com/JuliaMath/HypergeometricFunctions_Mod.jl/workflows/CI/badge.svg)](https://github.com/JuliaMath/HypergeometricFunctions_Mod.jl/actions?query=workflow%3ACI) [![codecov](https://codecov.io/gh/JuliaMath/HypergeometricFunctions_Mod.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/JuliaMath/HypergeometricFunctions_Mod.jl) [![](https://img.shields.io/badge/docs-stable-blue.svg)](https://JuliaMath.github.io/HypergeometricFunctions_Mod.jl/stable) [![](https://img.shields.io/badge/docs-dev-blue.svg)](https://JuliaMath.github.io/HypergeometricFunctions_Mod.jl/dev)
 
 This package provides an implementation of the generalized hypergeometric function `pFq(α, β, z)`.
 
 ```julia
-julia> using HypergeometricFunctions
+julia> using HypergeometricFunctions_Mod
 
 julia> pFq((), (), 0.1) # ≡ exp(0.1)
 1.1051709180756477

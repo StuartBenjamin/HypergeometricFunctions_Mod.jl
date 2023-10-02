@@ -1,6 +1,6 @@
-using HypergeometricFunctions, SpecialFunctions, Test
+using HypergeometricFunctions_Mod, SpecialFunctions, Test
 import LinearAlgebra: norm
-import HypergeometricFunctions: iswellpoised, isalmostwellpoised, M, U,
+import HypergeometricFunctions_Mod: iswellpoised, isalmostwellpoised, M, U,
                                 pochhammer, _₂F₁general, _₂F₁general2,
                                 pFqdrummond, pFqweniger, pFq2string
 
@@ -269,7 +269,7 @@ end
         @test pFq(a, b, c) ≈ result atol=eps() rtol=rtol
         (a, b, c, result) = NumberType.([2.36231, -0.901808, 1.00893]), NumberType.([1.39985, -2.34968]), NumberType(0.970806084927347), 42731.87930657499
         @test pFq(a, b, c) ≈ result atol=eps() rtol=rtol
-        @test HypergeometricFunctions.pFqcontinuedfraction(a, b, c) ≈ result atol=eps() rtol=rtol
+        @test HypergeometricFunctions_Mod.pFqcontinuedfraction(a, b, c) ≈ result atol=eps() rtol=rtol
         (a, b, c, result) = NumberType.([-0.715302, 2.94101, -0.498188]), NumberType.([-0.393808, -0.0265878]), NumberType(0.4375358657735875), 61.68955383799459
         @test pFq(a, b, c) ≈ result atol=eps() rtol=rtol
         (a, b, c, result) = NumberType.([-1.14105, 1.9464, -2.44787]), NumberType.([0.54636, -0.654353]), NumberType(-2.9505198429994763), -53.189709409599516

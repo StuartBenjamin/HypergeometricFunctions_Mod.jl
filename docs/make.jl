@@ -1,12 +1,12 @@
-using ComplexPhasePortrait, Documenter, HypergeometricFunctions, Images
+using ComplexPhasePortrait, Documenter, HypergeometricFunctions_Mod, Images
 
-DocMeta.setdocmeta!(HypergeometricFunctions, :DocTestSetup, :(using HypergeometricFunctions); recursive=true)
+DocMeta.setdocmeta!(HypergeometricFunctions_Mod, :DocTestSetup, :(using HypergeometricFunctions_Mod); recursive=true)
 
 makedocs(
-    modules = [HypergeometricFunctions],
-    sitename = "HypergeometricFunctions.jl",
+    modules = [HypergeometricFunctions_Mod],
+    sitename = "HypergeometricFunctions_Mod.jl",
     authors = "Richard Mikael Slevinsky",
     strict = false
 )
 
-deploydocs(repo = "github.com/JuliaMath/HypergeometricFunctions.jl.git")
+deploydocs(repo = "github.com/JuliaMath/HypergeometricFunctions_Mod.jl.git")
